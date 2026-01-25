@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="California Dream – a punk cover band.">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:title" content="California Dream">
     <meta property="og:description" content="a punk music cover band.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://californiadream.hu">
-    <meta property="og:image" content="https://californiadream.hu/og-fb-2026.jpg">
-    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image" content="https://californiadream.hu/og-image-v2.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
@@ -33,35 +32,56 @@
         .container {
             max-width: 720px;
             padding: 48px 32px;
-            animation: fadeUp 1.2s ease-out forwards;
             position: relative;
-        }
-
-        /* Language switch */
-        .lang-switch {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 0.85rem;
-        }
-
-        .lang-switch button {
-            background: none;
-            border: none;
-            color: #4da3ff;
-            cursor: pointer;
-            margin-left: 8px;
-            opacity: 0.6;
-        }
-
-        .lang-switch button.active {
-            opacity: 1;
-            text-decoration: underline;
+            animation: fadeUp 1.2s ease-out forwards;
         }
 
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(24px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Language switch */
+        .lang-switch {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-switch button {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            opacity: 0.5;
+        }
+
+        .lang-switch button.active {
+            opacity: 1;
+        }
+
+        .lang-switch svg {
+            width: 26px;
+            height: 18px;
+            border-radius: 3px;
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.25);
+        }
+
+        /* Hero image */
+        .hero-image {
+            width: 100%;
+            max-width: 620px;
+            margin: 0 auto 36px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+        }
+
+        .hero-image img {
+            width: 100%;
+            display: block;
         }
 
         h1 {
@@ -91,33 +111,16 @@
             margin-bottom: 42px;
         }
 
-        .section {
-            margin-bottom: 42px;
-        }
-
         .section p {
             font-size: 1rem;
             opacity: 0.75;
         }
 
         .social a {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            display: inline-block;
+            margin-top: 14px;
             color: #4da3ff;
             text-decoration: none;
-            font-size: 1rem;
-            border-bottom: 1px solid transparent;
-        }
-
-        .social a:hover {
-            border-bottom: 1px solid #4da3ff;
-        }
-
-        .social svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
         }
 
         footer {
@@ -137,79 +140,106 @@
 </head>
 
 <body>
-    <div class="container">
+<div class="container">
 
-        <!-- Language switch -->
-        <div class="lang-switch">
-            <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
-            <button id="btn-hu" onclick="setLang('hu')">HU</button>
-        </div>
-
-        <h1>California Dream</h1>
-
+    <!-- Language switch -->
+    <div class="lang-switch">
         <!-- EN -->
-        <div id="lang-en" class="lang active">
-            <div class="tagline">a punk music cover band</div>
-
-            <div class="intro">
-                The California Dream is a punk cover band
-                inspired by 90's pop-punk music.
-            </div>
-
-            <div class="section">
-                <p>Website available soon!</p>
-            </div>
-
-            <div class="section social">
-                <a href="https://www.facebook.com/profile.php?id=61583996007581" target="_blank">
-                    Facebook
-                </a>
-                <br><br>
-                <a href="https://www.youtube.com/channel/UC1Wc7UB4wHaQP6CFUZNiOnQ" target="_blank">
-                    YouTube
-                </a>
-            </div>
-        </div>
+        <button id="btn-en" class="active" onclick="setLang('en')" aria-label="English">
+            <svg viewBox="0 0 60 30">
+                <rect width="60" height="30" fill="#012169"/>
+                <path d="M0 0 L60 30 M60 0 L0 30" stroke="#FFF" stroke-width="6"/>
+                <path d="M0 0 L60 30 M60 0 L0 30" stroke="#C8102E" stroke-width="4"/>
+                <rect x="26" width="8" height="30" fill="#FFF"/>
+                <rect y="11" width="60" height="8" fill="#FFF"/>
+                <rect x="28" width="4" height="30" fill="#C8102E"/>
+                <rect y="13" width="60" height="4" fill="#C8102E"/>
+            </svg>
+        </button>
 
         <!-- HU -->
-        <div id="lang-hu" class="lang">
-            <div class="tagline">punk feldolgozásokat játszó zenekar</div>
-
-            <div class="intro">
-                A California Dream egy punk feldolgozásokat játszó zenekar,
-                amelyet a 90-es évek pop-punk zenéje inspirált.
-            </div>
-
-            <div class="section">
-                <p>Weboldal hamarosan!</p>
-            </div>
-
-            <div class="section social">
-                <a href="https://www.facebook.com/profile.php?id=61583996007581" target="_blank">
-                    Facebook
-                </a>
-                <br><br>
-                <a href="https://www.youtube.com/channel/UC1Wc7UB4wHaQP6CFUZNiOnQ" target="_blank">
-                    YouTube
-                </a>
-            </div>
-        </div>
-
-        <footer>
-            © 2026 California Dream
-        </footer>
+        <button id="btn-hu" onclick="setLang('hu')" aria-label="Magyar">
+            <svg viewBox="0 0 60 30">
+                <rect width="60" height="10" y="0" fill="#CE2939"/>
+                <rect width="60" height="10" y="10" fill="#FFFFFF"/>
+                <rect width="60" height="10" y="20" fill="#477050"/>
+            </svg>
+        </button>
     </div>
 
-    <script>
-        function setLang(lang) {
-            document.getElementById('lang-en').classList.remove('active');
-            document.getElementById('lang-hu').classList.remove('active');
-            document.getElementById('btn-en').classList.remove('active');
-            document.getElementById('btn-hu').classList.remove('active');
+    <!-- HERO IMAGE (MINDKÉT NYELV FELETT) -->
+    <div class="hero-image">
+        <img src="https://californiadream.hu/og-image-v2.jpg"
+             alt="California Dream – punk cover band">
+    </div>
 
-            document.getElementById('lang-' + lang).classList.add('active');
-            document.getElementById('btn-' + lang).classList.add('active');
+    <h1>California Dream</h1>
+
+    <!-- EN -->
+    <div id="lang-en" class="lang active">
+        <div class="tagline">a punk music cover band</div>
+
+        <div class="intro">
+            The California Dream is a punk cover band inspired by 90's pop-punk music.
+        </div>
+
+        <div class="section">
+            <p>Website available soon!</p>
+        </div>
+
+        <div class="section social">
+            <a href="https://www.facebook.com/profile.php?id=61583996007581" target="_blank">Facebook</a><br>
+            <a href="https://www.youtube.com/channel/UC1Wc7UB4wHaQP6CFUZNiOnQ" target="_blank">YouTube</a>
+        </div>
+    </div>
+
+    <!-- HU -->
+    <div id="lang-hu" class="lang">
+        <div class="tagline">punk feldolgozásokat játszó zenekar</div>
+
+        <div class="intro">
+            A California Dream egy punk feldolgozásokat játszó zenekar,
+            amelyet a 90-es évek pop-punk zenéje inspirált.
+        </div>
+
+        <div class="section">
+            <p>Weboldal hamarosan!</p>
+        </div>
+
+        <div class="section social">
+            <a href="https://www.facebook.com/profile.php?id=61583996007581" target="_blank">Facebook</a><br>
+            <a href="https://www.youtube.com/channel/UC1Wc7UB4wHaQP6CFUZNiOnQ" target="_blank">YouTube</a>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 California Dream
+    </footer>
+</div>
+
+<script>
+    function setLang(lang, save = true) {
+        document.getElementById('lang-en').classList.remove('active');
+        document.getElementById('lang-hu').classList.remove('active');
+        document.getElementById('btn-en').classList.remove('active');
+        document.getElementById('btn-hu').classList.remove('active');
+
+        document.getElementById('lang-' + lang).classList.add('active');
+        document.getElementById('btn-' + lang).classList.add('active');
+
+        if (save) localStorage.setItem('lang', lang);
+    }
+
+    (function detectLanguage() {
+        const saved = localStorage.getItem('lang');
+        if (saved) {
+            setLang(saved, false);
+            return;
         }
-    </script>
+        const browserLang = navigator.language || '';
+        setLang(browserLang.startsWith('hu') ? 'hu' : 'en', false);
+    })();
+</script>
+
 </body>
 </html>
