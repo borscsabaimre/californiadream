@@ -2,9 +2,9 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <title>Hamarosan</title>
+    <title>California Dream – Hamarosan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Weboldal hamarosan.">
+    <meta name="description" content="A California Dream zenekar hivatalos oldala. Hamarosan.">
     <style>
         body {
             margin: 0;
@@ -31,6 +31,17 @@
             opacity: 0.85;
             line-height: 1.6;
         }
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            font-size: 1rem;
+            color: #4da3ff;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        a:hover {
+            border-bottom: 1px solid #4da3ff;
+        }
         footer {
             margin-top: 40px;
             font-size: 0.85rem;
@@ -40,13 +51,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>Hamarosan</h1>
+        <h1>California Dream</h1>
         <p>
-            Ez az oldal jelenleg fejlesztés alatt áll.<br>
-            Kérjük, látogass vissza később.
+            Az oldal jelenleg fejlesztés alatt áll.<br>
+            Kövess minket a Facebookon a friss hírekért.
         </p>
+
+        <a href="https://www.facebook.com/profile.php?id=61583996007581"
+           target="_blank"
+           rel="noopener noreferrer">
+            Facebook oldal →
+        </a>
+
         <footer>
-            © 2026
+            © 2026 California Dream
         </footer>
     </div>
 </body>
